@@ -1,0 +1,2 @@
+{'ID': 2, 'City': 'Trier', 'Year': 4319, 'Month': 3, 'Day': 14, 'Type': 'theft', 'Arrest': True, 'Description': 'robbed a fund to help robots without a master'}
+{'ID': 7, 'City': 'Everland', 'Year': 4323, 'Month': 10, 'Day': 13, 'Type': 'theft', 'Arrest': True, 'Description': 'car theft'}
