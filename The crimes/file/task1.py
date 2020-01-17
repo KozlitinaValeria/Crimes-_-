@@ -1,18 +1,18 @@
-indexes_to_int = [0,2,3,4]
-indexes_to_bool = [7]
+from json import dumps
 
-with open ('../Crimes.csv') as file:
+indexes_to_int = [0, 2, 3, 4]
+indexes_to_bool = [7]
+INDEX_OF_NAME = 5
+
+crimes = {}
+with open('../Crimes.csv') as file:
     header = file.readline().rstrip().split(',')
-    print(header)
+    header.pop(INDEX_OF_NAME)
     for line in file:
         crime_list = line.rstrip().split(',')
         for index in indexes_to_int:
             if crime_list[index] != '-':
-                crime_list[index] == int(crime_list[index])
-
-        for index in indexes_to_bool:
-            crime_list[index] == bool(crime_list[index])
-            print(crime_list)
+                crime_list[index] = int(crime_list[index])
 
         for index in indexes_to_bool:
             if crime_list[index] == "True":
@@ -31,5 +31,6 @@ with open ('../Crimes.csv') as file:
         else:
             crimes[name] = [crime_dict]
 
+# print(dumps(crimes, indent=4))
 
 
