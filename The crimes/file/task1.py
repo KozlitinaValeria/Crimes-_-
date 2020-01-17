@@ -31,6 +31,6 @@ with open('../Crimes.csv') as file:
         else:
             crimes[name] = [crime_dict]
 
-# print(dumps(crimes, indent=4))
+print(dumps(crimes, indent=4))
 
 
